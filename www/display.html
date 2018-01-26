@@ -1,0 +1,71 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	var cryptoPrices = new Array();
+	$(document).ready(function()
+	{
+		makeAjaxCall().then(dataFromServer, errorHandler);
+	});	
+	function makeAjaxCall()
+	{
+		var promiseObj = new Promise(function(resolve, reject)
+		{
+			$.ajax({
+				url: 'https://koinex.in/api/ticker',
+				type: 'get',
+				success: function(result)
+				{
+					// console.log(result);
+					cryptoPrices.push(
+						{"bitcoin": result.prices.BTC},
+						{"ethereum": result.prices.ETH},
+						{"litecoin": result.prices.LTC},
+						{"ripple": result.prices.XRP},
+						{"bitcoin-cash": result.prices.BCH},
+					);
+					console.log(cryptoPrices);
+					resolve();
+				},
+				error: function(error)
+				{
+					console.log("error");
+					reject(error);
+				}
+			});
+		});
+		return promiseObj;
+	}
+
+	function dataFromServer()
+	{
+		$.ajax({
+			url: '/displayServer',
+			type: 'post',
+			data: {
+				jsonData: cryptoPrices
+			},
+			success: function(result)
+			{
+				console.log(result);
+			},
+			error: function(error)
+			{
+				console.log(error);
+			}			
+		});
+	}
+
+	function errorHandler(error)
+	{
+		console.log(error);
+	}
+</script>

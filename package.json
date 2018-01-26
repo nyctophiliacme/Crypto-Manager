@@ -1,0 +1,17 @@
+{
+  "name": "koinex_helper",
+  "version": "1.0.0",
+  "description": "Helps to calculate profit/loss in each of the cryptocurrencies you have invested.",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^7.4.0",
+    "body-parser": "^1.18.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

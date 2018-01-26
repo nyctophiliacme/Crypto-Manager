@@ -1,0 +1,16 @@
+https://stackoverflow.com/questions/45174120/pg-connect-not-a-function
+
+https://stackoverflow.com/questions/17319395/node-js-pg-postgresql-and-insert-queries-app-hangs
+
+https://stackoverflow.com/questions/22636388/import-sql-file-in-node-js-and-execute-against-postgresql
+
+https://stackoverflow.com/questions/45329461/query-on-is-not-a-function
+
+https://stackoverflow.com/questions/9205496/how-to-make-connection-to-postgres-via-node-js
+
+https://stackoverflow.com/questions/20825915/node-js-code-in-html-file
+
+https://stackoverflow.com/questions/17441495/returning-result-from-select-with-node-postgres
+
+
+
