@@ -3,69 +3,99 @@
 <html>
 <head>
 	<title>Display</title>
+	<style type="text/css">
+		body
+		{
+			margin: 0 15%;
+  			background-color: #ecf0f1;	
+		}
+		.container
+		{
+			background-color: #2c3e50;
+			margin-bottom: 30px;
+			color: #f1f2f6;
+			padding: 10px;
+			border-radius: 10px;
+		}
+		.div-row
+		{
+			display: table-row;	
+		}
+		.div-row span
+		{
+			padding: 3px 8px;
+			display: table-cell;
+		}
+		.profit-loss
+		{
+			color: #2ecc71;
+		}
+		.cont-net
+		{
+			display: flex;
+			justify-content: space-between;
+		}
+		.attr-name
+		{
+			text-align: right;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+			/*font-size: 1.1em;*/
+			letter-spacing: 1.2px;
+		}
+		.attr-value
+		{
+			color: #48dbfb;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		}
+		.profit
+		{
+			color: #2ecc71;
+		}
+		.loss
+		{
+			color: #e74c3c;
+		}
+		.position-right
+		{
+			margin-right: 5%;
+		}
+		.cont-net
+		{
+			border-bottom: solid #f1f2f6 2px;
+			border-top: solid #f1f2f6 2px;
+			padding: 15px 0;
+		}
+		.cont-current
+		{
+			padding: 15px 0;
+		}
+		.cont-profit
+		{
+			padding: 15px 0;
+			font-size: 1.05em;
+		}
+		.cont-profit .attr-value
+		{
+			font-weight: bold;
+			
+		}
+		.cont-title
+		{
+			background-color: #f1f2f6;
+			color: #2c3e50;
+			border: 1px solid #2c3e50;
+			border-radius: 5px;
+			padding: 8px 15px 8px 15px;
+			font-family: Verdana;
+			font-weight: bold;
+			font-size: 1.2em;
+			display: inline-block;
+		}
+	</style>
 </head>
 <body>
-	
+	 
 </body>
 </html>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript">
-	var cryptoPrices = new Array();
-	$(document).ready(function()
-	{
-		makeAjaxCall().then(dataFromServer, errorHandler);
-	});	
-	function makeAjaxCall()
-	{
-		var promiseObj = new Promise(function(resolve, reject)
-		{
-			$.ajax({
-				url: 'https://koinex.in/api/ticker',
-				type: 'get',
-				success: function(result)
-				{
-					// console.log(result);
-					cryptoPrices.push(
-						{"bitcoin": result.prices.BTC},
-						{"ethereum": result.prices.ETH},
-						{"litecoin": result.prices.LTC},
-						{"ripple": result.prices.XRP},
-						{"bitcoin-cash": result.prices.BCH},
-					);
-					console.log(cryptoPrices);
-					resolve();
-				},
-				error: function(error)
-				{
-					console.log("error");
-					reject(error);
-				}
-			});
-		});
-		return promiseObj;
-	}
-
-	function dataFromServer()
-	{
-		$.ajax({
-			url: '/displayServer',
-			type: 'post',
-			data: {
-				jsonData: cryptoPrices
-			},
-			success: function(result)
-			{
-				console.log(result);
-			},
-			error: function(error)
-			{
-				console.log(error);
-			}			
-		});
-	}
-
-	function errorHandler(error)
-	{
-		console.log(error);
-	}
-</script>
+<script type="text/javascript" src="js/display.js"></script>

@@ -44,3 +44,61 @@ client.query("INSERT INTO TRADE(cryptocurrency, type, date, volume, price_per_un
 	}
   client.end();
 });
+
+
+
+
+
+
+
+
+
+
+//Callback
+
+func1(func2);    
+    function func1(callback)
+    {
+      var count = 0;
+      cryptos.forEach(function(crypto)
+    {
+      var sum = 0;
+      const qry = {
+        name: 'fetch-transaction',
+        text: 'SELECT * FROM trade WHERE cryptocurrency = $1',
+        values: [crypto]
+      }
+      client.query(qry, (err, res) => {
+        if(err)
+        {
+          console.log(err);
+        }
+        else
+        {
+          res.rows.forEach(function(row)
+          {
+            sum += parseFloat(row.price_per_unit);
+          });
+          var temp = {
+            "cryptocurrency" : crypto,
+            "sum" : sum
+          }; 
+          data.push(temp);
+          count++;
+        }
+        // console.log(data);
+        if(cryptos.length == count)
+        {
+          callback();
+        }
+      }); 
+    });
+    }
+    function func2()
+    {
+      console.log(data);
+    response.send(JSON.stringify({
+      result: 'success',
+      data: data
+    }));
+    }
