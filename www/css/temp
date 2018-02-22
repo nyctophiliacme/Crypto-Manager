@@ -1,0 +1,13 @@
+Types of Pricing Values:
+
+1. Cost Based
+	In this scenario we send request to Costing API. A PL-SQL code is executed and the results are returned to us. The value can be either average of all the transactions which have taken place of the particular item between the two parties, or the standard inventory cost of the product.
+
+2. Document Based
+	In this case the price given in the source document (SO, PO) is used. It is fetched from the table source_event_doc_info.
+
+3. Pricing List
+	For complex logic handling, we use this pricing value type and call a Pricing API to carry out this task. This engine handles conditions like, giving a particular product at a lesser rate to a party or increasing the price of the product at a particular period of time.
+
+4. Third Party
+	In this case the customers can provide a service which calculates the transfer price. This service is registered with fusion applications and is invoked when pricing option is setup as: Third Party.

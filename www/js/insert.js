@@ -2,8 +2,13 @@ $(document).ready(function()
 {
 	dateHandler();
 	changeHandlers();
-	$('#submitButton').click(insertFunction);
+	$('#submitButton').click(validate);
 });	
+function precisionRound(number, precision) 
+{
+	var factor = Math.pow(10, precision);
+	return Math.round(number * factor) / factor;
+}
 function dateHandler()
 {
 	n =  new Date();
@@ -29,14 +34,14 @@ function changeHandlers()
 {
 	$("input[name='volume']").change(function() 
 	{
-		var temp = $(this).val() * $("input[name='price_per_unit']").val();
+		var temp = precisionRound($(this).val() * $("input[name='price_per_unit']").val(), 5);
     	$("input[name='price']").val(temp);
     	tradeFeesHelper();
 	});
 
 	$("input[name='price_per_unit']").change(function() 
 	{
-		var temp = $(this).val() * $("input[name='volume']").val();
+		var temp = precisionRound($(this).val() * $("input[name='volume']").val(), 5);
     	$("input[name='price']").val(temp);
     	tradeFeesHelper();
 	});
@@ -50,7 +55,7 @@ function tradeFeesHelper()
 {
 	if($("input[name='buy_or_sell']:checked").val() === 'buy')
 	{
-		$("input[name='fees']").val($("input[name='price']").val() * 0.0025);
+		$("input[name='fees']").val(precisionRound($("input[name='price']").val() * 0.0025, 5));
 	}
 	else if($("input[name='buy_or_sell']:checked").val() === 'sell')
 	{
@@ -64,8 +69,10 @@ function totalHelper()
 	// console.log(tot);
 	$("input[name='total']").val(tot);
 }
-function validate()
+function validate(evt)
 {
+	evt.preventDefault();
+	evt.stopPropagation();
 	if( ! $("input[name='date']").val() )
 	{	
 		$("input[name='date']").focus();
@@ -86,14 +93,13 @@ function validate()
 		$("input[name='extra_fees']").focus();
 		alert("Please enter the Extra Fees charged!");
 	}
+	else
+	{
+		insertFunction();
+	}
 }
-function insertFunction(evt)
+function insertFunction()
 {
-	
-	evt.preventDefault();
-	evt.stopPropagation();
-	validate();
-
 	var tempDate = $('#datepicker').datepicker('getDate');
 	var finalDate = $.datepicker.formatDate("yy-mm-dd", tempDate);
 	console.log(finalDate);
@@ -117,12 +123,50 @@ function insertFunction(evt)
 			console.log(result.result);
 			if(result.result === 'success')
 			{
-				// window.location.replace("index.html");
+				messageHandler("#success-top");
+				setInterval(function()
+				{
+					window.location.replace("insert.html");
+				},3000);
+				// window.location.replace("insert.html");
 			}
 		},
 		error: function(error)
 		{
+			messageHandler("#failure-top");
 			console.log(error);
 		}			
 	});
+}
+function messageHandler(var1)
+{
+	$(var1).animate({
+		top: "0px"
+	}, 1000);
+
+	setInterval(function()
+	{
+		$(var1).animate({
+			top: "-50px"
+		}, 1000);
+	},2000);
+}
+function siteSelector(n)
+{
+	var fileName;
+	switch(n)
+	{
+		case "1": 
+			fileName = "index.html";
+			break;
+		case "2":
+			fileName = "insert.html";
+			break;
+		case "3":
+			fileName = "display.html";
+			break;
+		default:
+			fileName = "#";
+	}
+	window.location.replace(fileName);
 }

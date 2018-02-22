@@ -3,25 +3,50 @@
 <head>
 	<title>
 		Home
-	</title>	
+	</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div onclick="insertFunction()">
-		Insert
+	<div class = "header">
+		<div class = "title-name">
+			cryptofolio
+		</div>
+		<div class = "tag-line">
+			A simple way to manage your crptocurrency transactions.
+		</div>
 	</div>
-	<div  onclick="displayFunction()"">
-		Display
+	<div class="menu">
+    <ul>
+       <li id="1" onclick="siteSelector(this.id)">Home</li><!--
+       --><li id="2" onclick="siteSelector(this.id)">Insert</li><!--
+       --><li id="3" onclick="siteSelector(this.id)">Display</li>
+    </ul>
+    </div>
+	<div class = "footer">
+		<div class = "first-footer">
+			<div class = "developed-by" >
+				Developed by: Pransh
+			</div>
+			<div class = "logos-container">
+	            <a href="https://www.github.com/nyctophiliacme" class="social-icons" target="_blank">
+	                <img src="images/git.png" class = "logos">
+	            </a>
+	            <a href="https://stackoverflow.com/users/7145177/pransh-tiwari" class="social-icons" target="_blank">
+	                <img src="images/stack.png" class = "logos">
+	            </a>
+            	<a href="https://www.linkedin.com/in/pransh-tiwari/" class="social-icons" target="_blank">
+	                <img src="images/linkedin.png" class = "logos">
+	            </a>
+        	</div>
+        </div>
+		<div class = "footer-tag">
+			If you like this product feel free to send a box of brownies to the creator :p
+		</div>
+		<div class = "feedback-footer">
+			For any suggestions or compliments or if you think any new feature this web-app should have, please provide <a href= "#" class = "link">here</a>
+		</div>
 	</div>
 </body>
 </html>
 <script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript">
-	function insertFunction()
-	{
-		window.location = "insert.html"
-	}
-	function displayFunction()
-	{
-		window.location = "display.html"
-	}
-</script>
+<script type="text/javascript" src="js/index.js"></script>

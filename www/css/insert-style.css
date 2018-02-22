@@ -1,0 +1,68 @@
+.table-content
+{
+	margin: auto;
+	width: 380px;
+	height: 100%;
+	/*display: inline-block;*/
+}
+table
+{
+	font-family: "Verdana", Geneva, sans-serif;
+	font-size: 0.9em;
+	width: 100%;
+	table-layout: fixed;
+}
+td
+{
+	padding: 5px;
+}
+input
+{
+	padding: 3px;
+	border-style: inset outset outset inset; 
+	border-width: 1px;
+	border-radius: 2px;
+}
+select
+{
+	padding: 3px;
+	border-width: 1px;
+	border-radius: 2px;
+}
+#submit-button
+{
+	margin: auto;
+	width: 60px;
+	margin-top: 10px;
+}
+#datepicker
+{
+	background-image: url(../images/interface.png);
+    background-position: right 2px center;
+    background-repeat: no-repeat;
+}
+.top-div
+{
+	position: absolute;
+	top: 0;
+	/*padding: 10px;*/
+	/*color: var(--text-light);*/
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1.1em;
+	text-align: center;
+	left: 0;
+	right: 0;
+	width: 320px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	top: -50px;
+}
+#success-top
+{
+	background-color: var(--text-green);
+}
+#failure-top
+{
+	background-color: var(--text-red);
+}

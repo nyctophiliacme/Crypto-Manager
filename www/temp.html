@@ -1,51 +1,395 @@
-<div class = 'container'>
-		<div class = 'cont-title'>
-			Ripple (XRP)
-		</div>
-		<div class = 'cont-profit'>
-			<div class = 'div-row'>
-				<span class = 'attr-name'>Net Profit:</span>
-				<span class = 'attr-value profit-loss'>123.0</span>
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temp</title>
+	<link rel="stylesheet" type="text/css" href="css/display-style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+		<div class = "header">
+			<div class = "title-name">
+				cryptofolio
+			</div>
+			<div class = "tag-line">
+				A simple way to manage your crptocurrency transactions.
 			</div>
 		</div>
-		<div class = 'cont-net'>
-			<div class = 'net-item'>
-				<div class = 'div-row'>
-					<span class = 'attr-name'>Net Buy Volume:</span>
-					<span class = 'attr-value'>40</span>
-				</div>
-				<div class = 'div-row'>
-					<span class = 'attr-name'>Price:</span>
-					<span class = 'attr-value'>343</span>
-				</div>
-				<div class = 'div-row'>
-					<span class = 'attr-name'>Average Cost:</span>
-					<span class = 'attr-value'>3434</span>
+		<div class="menu">
+	    <ul>
+	       <li id="1" onclick="siteSelector(this.id)">Home</li><!--
+	       --><li id="2" onclick="siteSelector(this.id)">Insert</li><!--
+	       --><li id="3" onclick="siteSelector(this.id)">Display</li>
+	    </ul>
+	    </div>
+	    <div class = "results">
+			<div class = "tabs" >
+				<span class = "attr-name"> Total Buy: </span>
+				<span class = "attr-value" id="total-buy"> 3242342 </span>
+			</div>
+			<div class = "tabs" >
+				<span class = "attr-name"> Total Sell: </span>
+				<span class = "attr-value" id="total-sell"> 23424 </span>
+			</div>
+			<div class = "tabs" >
+				<span class = "attr-name"> Net Profit: </span>
+				<span class = "attr-value" id = "net-profit"> 23423 </span>
+			</div>
+		</div>
+		<div class="flex-container">	
+			<div class = "flip-container">
+				<div class = "flipper">
+					<div class = "front">
+						<div class = 'cont-title'>
+							Ripple (XRP)
+						</div>
+						<div class = "image-front">
+							<img class = "crypto-image-front" src = "images/ripple.png">
+						</div>
+						<div class = 'cont-profit'>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Profit:</span>
+								<span class = 'attr-value'>123.0</span>
+							</div>
+						</div>
+						<div class = "cont-current">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Value:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+						</div>
+					</div>
+					<div class = "back">
+						<div class = "image-back">
+							<img class = "crypto-image-back" src = "images/ripple.png">
+						</div>
+						<div class = "cont-buy">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Buy Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+						<div class = "cont-sell">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Sell Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class = 'net-item position-right'>
-				<div class = 'div-row'>
-					<span class = 'attr-name'>Net Sell Volume:</span>
-					<span class = 'attr-value'>40</span>
+
+
+
+			<div class = "flip-container">
+				<div class = "flipper">
+					<div class = "front">
+						<div class = 'cont-title'>
+							Ripple (XRP)
+						</div>
+						<div class = "image-front">
+							<img class = "crypto-image-front" src = "images/ripple.png">
+						</div>
+						<div class = 'cont-profit'>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Profit:</span>
+								<span class = 'attr-value'>123.0</span>
+							</div>
+						</div>
+						<div class = "cont-current">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Value:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+						</div>
+					</div>
+					<div class = "back">
+						<div class = "image-back">
+							<img class = "crypto-image-back" src = "images/ripple.png">
+						</div>
+						<div class = "cont-buy">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Buy Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+						<div class = "cont-sell">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Sell Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class = 'div-row'>
-					<span class = 'attr-name'>Price:</span>
-					<span class = 'attr-value'>343</span>
+			</div>
+
+
+			<div class = "flip-container">
+				<div class = "flipper">
+					<div class = "front">
+						<div class = 'cont-title'>
+							Ripple (XRP)
+						</div>
+						<div class = "image-front">
+							<img class = "crypto-image-front" src = "images/ripple.png">
+						</div>
+						<div class = 'cont-profit'>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Profit:</span>
+								<span class = 'attr-value'>123.0</span>
+							</div>
+						</div>
+						<div class = "cont-current">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Value:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+						</div>
+					</div>
+					<div class = "back">
+						<div class = "image-back">
+							<img class = "crypto-image-back" src = "images/ripple.png">
+						</div>
+						<div class = "cont-buy">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Buy Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+						<div class = "cont-sell">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Sell Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class = 'div-row'>
-					<span class = 'attr-name'>Average Cost:</span>
-					<span class = 'attr-value'>3434</span>
+			</div>
+
+
+			<div class = "flip-container">
+				<div class = "flipper">
+					<div class = "front">
+						<div class = 'cont-title'>
+							Ripple (XRP)
+						</div>
+						<div class = "image-front">
+							<img class = "crypto-image-front" src = "images/ripple.png">
+						</div>
+						<div class = 'cont-profit'>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Profit:</span>
+								<span class = 'attr-value'>123.0</span>
+							</div>
+						</div>
+						<div class = "cont-current">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Value:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+						</div>
+					</div>
+					<div class = "back">
+						<div class = "image-back">
+							<img class = "crypto-image-back" src = "images/ripple.png">
+						</div>
+						<div class = "cont-buy">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Buy Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+						<div class = "cont-sell">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Sell Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class = "flip-container">
+				<div class = "flipper">
+					<div class = "front">
+						<div class = 'cont-title'>
+							Ripple (XRP)
+						</div>
+						<div class = "image-front">
+							<img class = "crypto-image-front" src = "images/ripple.png">
+						</div>
+						<div class = 'cont-profit'>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Profit:</span>
+								<span class = 'attr-value'>123.0</span>
+							</div>
+						</div>
+						<div class = "cont-current">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Current Value:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+						</div>
+					</div>
+					<div class = "back">
+						<div class = "image-back">
+							<img class = "crypto-image-back" src = "images/ripple.png">
+						</div>
+						<div class = "cont-buy">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Buy Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+						<div class = "cont-sell">
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Net Sell Volume:</span>
+								<span class = 'attr-value'>40</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Price:</span>
+								<span class = 'attr-value'>343</span>
+							</div>
+							<div class = 'div-row'>
+								<span class = 'attr-name'>Average Cost:</span>
+								<span class = 'attr-value'>3434</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class = 'cont-current'>
-			<div class = 'div-row'>
-				<span class = 'attr-name'>Current Volume:</span>
-				<span class = 'attr-value'>40</span>
+		
+		<div class = "footer">
+			<div class = "first-footer">
+				<div class = "developed-by" >
+					Developed by: Pransh
+				</div>
+				<div class = "logos-container">
+		            <a href="https://www.github.com/nyctophiliacme" class="social-icons" target="_blank">
+		                <img src="images/git.png" class = "logos">
+		            </a>
+		            <a href="https://stackoverflow.com/users/7145177/pransh-tiwari" class="social-icons" target="_blank">
+		                <img src="images/stack.png" class = "logos">
+		            </a>
+	            	<a href="https://www.linkedin.com/in/pransh-tiwari/" class="social-icons" target="_blank">
+		                <img src="images/linkedin.png" class = "logos">
+		            </a>
+	        	</div>
+	        </div>
+			<div class = "footer-tag">
+				If you like this product feel free to send a box of brownies to the creator :p
 			</div>
-			<div class = 'div-row'>
-				<span class = 'attr-name'>Current Value:</span>
-				<span class = 'attr-value'>40</span>
+			<div class = "feedback-footer">
+				For any suggestions or compliments or if you think any new feature this web-app should have, please provide <a href= "#" class = "link">here</a>
 			</div>
 		</div>
-	</div>
+
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$('.front').click(function() 
+	{
+    	$(this).parent().css({'transform' : 'rotateY(180deg)'});
+	});
+	$('.back').click(function() 
+	{
+    	$(this).parent().css({'transform' : 'rotateY(0deg)'});
+	});
+</script>

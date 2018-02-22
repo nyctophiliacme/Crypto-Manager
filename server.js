@@ -58,7 +58,7 @@ app.listen(3000, function () {
 
 var cryptos = [ 'bitcoin', 'ethereum', 'litecoin', 'ripple', 'bitcoin-cash' ];
 var cryptoDisplayName = ['Bitcoin (BTC)', 'Ethereum (ETH)', 'Litecoin (LTC)', 'Ripple (XRP)', 'Bitcoin Cash (BCH)'];
-
+var cryptoImageArr = ['images/bitcoin.png', 'images/ethereum.png', 'images/litecoin.png', 'images/ripple.png', 'images/bitcoin-cash.png'];
 function precisionRound(number, precision) 
 {
 	var factor = Math.pow(10, precision);
@@ -131,6 +131,7 @@ app.post('/displayServer',function(request, response){
 							avg_sell_cost = net_sell_price / net_sell_volume;
 						}
 						var temp = {
+							"crypto_image" : cryptoImageArr[count],
 							"cryptocurrency" : cryptoDisplayName[count],
 							"net_buy_volume" : precisionRound(net_buy_volume,5),
 							"net_buy_price" : precisionRound(net_buy_price,3),
@@ -158,6 +159,9 @@ app.post('/displayServer',function(request, response){
     function sendResults()
   	{
   		// console.log(data);
+  		var temp = {
+  			
+  		};
 		response.send(JSON.stringify({
 			result: 'success',
 			data: data

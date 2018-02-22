@@ -1,0 +1,149 @@
+body
+{
+	padding-bottom: 165px;
+}
+.flip-container 
+{
+	perspective: 1000px;
+	margin: 15px 25px;
+}
+.flex-container
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*height: 100%;*/
+}
+.flipper 
+{
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+	/*transform-origin: 155px;*/
+}
+.front, .back, .flip-container
+{
+	width: 290px;
+	height: 290px;
+	text-align: center;
+	cursor: pointer;
+}
+.front, .back
+{
+	position: absolute;
+	backface-visibility: hidden;
+	background-color: var(--dark);
+	color: var(--text-light);
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 4px 6px 10px 0 rgba(0, 0, 0, 0.2), 7px 10px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.div-row
+{
+	display: table-row;	
+}
+.div-row span
+{
+	padding: 3px 8px;
+	display: table-cell;
+	width: 100%;
+	/*table-layout: fixed;*/
+}
+.attr-name
+{
+	text-align: left;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	/*font-size: 1.1em;*/
+	letter-spacing: 1.2px;
+}
+.attr-value
+{
+	text-align: left;
+	color: var(--text-blue);
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.profit
+{
+	color: var(--text-green);
+}
+.loss
+{
+	color: var(--text-red);
+}
+.cont-profit
+{
+	padding: 8px 0 15px 0;
+	font-size: 1.05em;
+}
+.cont-profit .attr-value
+{
+	font-weight: bold;	
+}
+.cont-title
+{
+	background-color: var(--text-light);
+	color: var(--dark);
+	border: 1px solid var(--dark);
+	border-radius: 5px;
+	padding: 8px 15px 8px 15px;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 1.2em;
+	display: inline-block;
+	margin: auto;
+}
+.front
+{	
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.back 
+{
+	transform: rotateY(180deg);
+}
+.cont-current, .cont-sell
+{
+	border-top: solid var(--text-light) 2px;
+}
+.cont-current
+{
+	padding-top: 10px;
+}
+.cont-sell
+{
+	padding-top: 15px;
+}
+.cont-buy
+{
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+.crypto-image-front
+{
+	height: 100px;
+	width: 100px;
+}
+.crypto-image-back
+{
+	height: 50px;
+	width: 50px;
+}
+.results
+{
+	display: flex;
+	padding: 13px 40px;
+	justify-content: space-between;
+	background-color: var(--dark);
+	border-bottom: solid 1px var(--text-light);
+	font-size: 1.05em;
+}
+.results .attr-value
+{
+	font-weight: bold;
+}
+.tabs
+{
+	color: var(--text-light);
+	margin: 0 20px;
+	display: inline-block;
+}

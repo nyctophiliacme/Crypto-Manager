@@ -3,99 +3,80 @@
 <html>
 <head>
 	<title>Display</title>
-	<style type="text/css">
-		body
-		{
-			margin: 0 15%;
-  			background-color: #ecf0f1;	
-		}
-		.container
-		{
-			background-color: #2c3e50;
-			margin-bottom: 30px;
-			color: #f1f2f6;
-			padding: 10px;
-			border-radius: 10px;
-		}
-		.div-row
-		{
-			display: table-row;	
-		}
-		.div-row span
-		{
-			padding: 3px 8px;
-			display: table-cell;
-		}
-		.profit-loss
-		{
-			color: #2ecc71;
-		}
-		.cont-net
-		{
-			display: flex;
-			justify-content: space-between;
-		}
-		.attr-name
-		{
-			text-align: right;
-			font-family: "Comic Sans MS", cursive, sans-serif;
-			/*font-size: 1.1em;*/
-			letter-spacing: 1.2px;
-		}
-		.attr-value
-		{
-			color: #48dbfb;
-			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-		}
-		.profit
-		{
-			color: #2ecc71;
-		}
-		.loss
-		{
-			color: #e74c3c;
-		}
-		.position-right
-		{
-			margin-right: 5%;
-		}
-		.cont-net
-		{
-			border-bottom: solid #f1f2f6 2px;
-			border-top: solid #f1f2f6 2px;
-			padding: 15px 0;
-		}
-		.cont-current
-		{
-			padding: 15px 0;
-		}
-		.cont-profit
-		{
-			padding: 15px 0;
-			font-size: 1.05em;
-		}
-		.cont-profit .attr-value
-		{
-			font-weight: bold;
-			
-		}
-		.cont-title
-		{
-			background-color: #f1f2f6;
-			color: #2c3e50;
-			border: 1px solid #2c3e50;
-			border-radius: 5px;
-			padding: 8px 15px 8px 15px;
-			font-family: Verdana;
-			font-weight: bold;
-			font-size: 1.2em;
-			display: inline-block;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/display-style.css">
 </head>
 <body>
-	 
+	<div class = "header">
+		<div class = "title-name">
+			cryptofolio
+		</div>
+		<div class = "tag-line">
+			A simple way to manage your crptocurrency transactions.
+		</div>
+	</div>
+	<div class="menu">
+    <ul>
+       <li id="1" onclick="siteSelector(this.id)">Home</li><!--
+       --><li id="2" onclick="siteSelector(this.id)">Insert</li><!--
+       --><li id="3" onclick="siteSelector(this.id)">Display</li>
+    </ul>
+    </div>
+	<div class="flex-container"></div>
+
+	<div class = "footer">
+		<div class = "results">
+			<div class = "tabs" >
+				<span class = "attr-name"> Total Buy: </span>
+				<span class = "attr-value" id="total-buy"></span>
+			</div>
+			<div class = "tabs" >
+				<span class = "attr-name"> Total Sell: </span>
+				<span class = "attr-value" id="total-sell"></span>
+			</div>
+			<div class = "tabs" >
+				<span class = "attr-name" id="total-profit-attr"> Net Profit: </span>
+				<span class = "attr-value" id = "total-profit"></span>
+			</div>
+		</div>
+		<div class = "first-footer">
+			<div class = "developed-by" >
+				Developed by: Pransh
+			</div>
+			<div class = "logos-container">
+	            <a href="https://www.github.com/nyctophiliacme" class="social-icons" target="_blank">
+	                <img src="images/git.png" class = "logos">
+	            </a>
+	            <a href="https://stackoverflow.com/users/7145177/pransh-tiwari" class="social-icons" target="_blank">
+	                <img src="images/stack.png" class = "logos">
+	            </a>
+            	<a href="https://www.linkedin.com/in/pransh-tiwari/" class="social-icons" target="_blank">
+	                <img src="images/linkedin.png" class = "logos">
+	            </a>
+        	</div>
+        </div>
+		<div class = "footer-tag">
+			If you like this product feel free to send a box of brownies to the creator :p
+		</div>
+		<div class = "feedback-footer">
+			For any suggestions or compliments or if you think any new feature this web-app should have, please provide <a href= "#" class = "link">here</a>
+		</div>
+	</div>
 </body>
 </html>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/display.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('.front').click(function() 
+		{
+			alert("Clicked");
+	    	$(this).parent().css({'transform' : 'rotateY(180deg)'});
+		});
+		$('.back').click(function() 
+		{
+	    	$(this).parent().css({'transform' : 'rotateY(0deg)'});
+		});
+	});
+</script>
