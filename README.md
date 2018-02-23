@@ -6,7 +6,9 @@ Installation Instructions:
 
 System Requirements: NodeJs
 
+Download the setup files from here: https://drive.google.com/open?id=1XaY4cIHiYJQ3jPD4T4MWIfsby99udluv
 Go to setup folder and run the installer.cmd file.
+
 After the installation you are good to go!
 Just run the file: run.cmd and the application is launched.
 
