@@ -13,24 +13,25 @@ System Requirements: NodeJs
 
 	C:\Program Files\PostgreSQL\10\bin
 
+6. Now run the file db-setup.cmd.
+
 After the installation you are good to go!
 
-6. Clone the github repository.
+7. Clone the github repository.
 
-git config --global url.https://github.com/.insteadOf git://github.com/
+	git config --global url.https://github.com/.insteadOf git://github.com/
 
-git clone git://github.com/nyctophiliacme/Crypto-Manager.git
+	git clone git://github.com/nyctophiliacme/Crypto-Manager.git
 
-Just run the file: run.cmd and the application is launched.
+	Just run the file: run.cmd and the application is launched.
 
+7. Note: If you are unable to pull the files from github because of your organization's proxy network, run the following command:
 
-Note: If you are unable to pull the files from github because of your organization's proxy network, run the following command:
+	git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
+	change proxyuser to your proxy user
+	change proxypwd to your proxy password
+	change proxy.server.com to the URL of your proxy server
+	change 8080 to the proxy port configured on your proxy server
 
-git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
-change proxyuser to your proxy user
-change proxypwd to your proxy password
-change proxy.server.com to the URL of your proxy server
-change 8080 to the proxy port configured on your proxy server
-
-eg) git config --global http.proxy http://www-proxy.us.oracle.com:80
+	eg) git config --global http.proxy http://www-proxy.us.oracle.com:80
 
