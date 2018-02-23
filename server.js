@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'www')));
 
 const Client = require('pg').Client;
-const connectionString = "postgresql://pransh:root@localhost:5432/koinex";
+const connectionString = "postgresql://postgres:root@localhost:5432/koinex";
 const client = new Client({
 	connectionString: connectionString,
 });
