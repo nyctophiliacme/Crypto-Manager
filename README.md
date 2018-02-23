@@ -28,9 +28,13 @@ System Requirements: NodeJs
 7. Note: If you are unable to pull the files from github because of your organization's proxy network, run the following command:
 
 	git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
+
 	change proxyuser to your proxy user
+
 	change proxypwd to your proxy password
+
 	change proxy.server.com to the URL of your proxy server
+	
 	change 8080 to the proxy port configured on your proxy server
 
 	eg) git config --global http.proxy http://www-proxy.us.oracle.com:80
