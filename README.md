@@ -15,7 +15,7 @@ System Requirements: NodeJs
 
 6. Now run the file db-setup.cmd.
 
-After the installation you are good to go!
+	After the installation you are good to go!
 
 7. Clone the github repository.
 
@@ -34,4 +34,3 @@ After the installation you are good to go!
 	change 8080 to the proxy port configured on your proxy server
 
 	eg) git config --global http.proxy http://www-proxy.us.oracle.com:80
-
