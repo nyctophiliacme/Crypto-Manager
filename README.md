@@ -13,11 +13,13 @@ System Requirements: NodeJs
 
 	C:\Program Files\PostgreSQL\10\bin
 
-6. Now run the file db-setup.cmd.
+6. The default password is "root". Enter it whenever prompted.
+
+7. Now run the file db-setup.cmd.
 
 	After the installation you are good to go!
 
-7. Clone the github repository.
+8. Clone the github repository.
 
 	git config --global url.https://github.com/.insteadOf git://github.com/
 
@@ -25,7 +27,7 @@ System Requirements: NodeJs
 
 	Just run the file: run.cmd and the application is launched.
 
-7. Note: If you are unable to pull the files from github because of your organization's proxy network, run the following command:
+9. Note: If you are unable to pull the files from github because of your organization's proxy network, run the following command:
 
 	git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
 
