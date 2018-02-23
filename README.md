@@ -1,4 +1,4 @@
-# Crypto-Manager
+# CryptoFolio
 Keep track of your investments on different cryptocurrencies currently on Koinex.
 
 
