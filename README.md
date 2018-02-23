@@ -21,3 +21,4 @@ change proxy.server.com to the URL of your proxy server
 change 8080 to the proxy port configured on your proxy server
 
 eg) git config --global http.proxy http://www-proxy.us.oracle.com:80
+
