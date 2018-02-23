@@ -22,3 +22,8 @@ change 8080 to the proxy port configured on your proxy server
 
 eg) git config --global http.proxy http://www-proxy.us.oracle.com:80
 
+Run the following command for cloning:
+
+git config --global url.https://github.com/.insteadOf git://github.com/
+
+git clone git://github.com/nyctophiliacme/Crypto-Manager.git
