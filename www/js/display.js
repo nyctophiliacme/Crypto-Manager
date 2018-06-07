@@ -6,6 +6,7 @@ $(document).ready(function()
 });	
 function makeAjaxCall()
 {
+	console.log("In makeAjaxCall");
 	var promiseObj = new Promise(function(resolve, reject)
 	{
 		$.ajax({
@@ -13,13 +14,14 @@ function makeAjaxCall()
 			type: 'get',
 			success: function(result)
 			{
-				// console.log(result);
+				console.log(result);
+				console.log(result.prices.inr.BTC);
 				cryptoPrices.push(
-					{crypto: "bitcoin", price: result.prices.BTC},
-					{crypto: "ethereum", price: result.prices.ETH},
-					{crypto: "litecoin", price: result.prices.LTC},
-					{crypto: "ripple", price: result.prices.XRP},
-					{crypto: "bitcoin-cash", price: result.prices.BCH}
+					{crypto: "bitcoin", price: result.prices.inr.BTC},
+					{crypto: "ethereum", price: result.prices.inr.ETH},
+					{crypto: "litecoin", price: result.prices.inr.LTC},
+					{crypto: "ripple", price: result.prices.inr.XRP},
+					{crypto: "bitcoin-cash", price: result.prices.inr.BCH}
 				);
 				// console.log(cryptoPrices);
 				resolve();
