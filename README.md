@@ -41,3 +41,13 @@ System Requirements: NodeJs
 	For reset, use
 
 	git config --global --unset http.proxy
+
+
+
+### Screenshots
+
+|  |  |
+| --- | --- |
+|![Display Page 1](./screenshots/display-large-1.png) | ![Display Page 2](./screenshots/display-large-2.png)|
+|![Display Page 3](./screenshots/display-large-3.png) | ![Insert Page 1](./screenshots/login.png)|
+|![Insert Page 2](./screenshots/insert-page-2.png) | !Display Page 4](./screenshots/display-small-1.png)|
