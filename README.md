@@ -50,4 +50,4 @@ System Requirements: NodeJs
 | --- | --- |
 |![Display Page 1](./Screenshots/display-large-1.png) | ![Display Page 2](./Screenshots/display-large-2.png)|
 |![Display Page 3](./Screenshots/display-large-3.png) | ![Insert Page 1](./Screenshots/insert-small-1.png)|
-|![Insert Page 2](./Screenshots/insert-page-2.png) | ![Display Page 4](./Screenshots/display-small-1.png)|
+|![Insert Page 2](./Screenshots/insert-small-2.png) | ![Display Page 4](./Screenshots/display-small-1.png)|
