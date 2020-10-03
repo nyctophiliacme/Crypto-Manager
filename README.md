@@ -3,6 +3,12 @@ Keep track of your investments on different cryptocurrencies currently on Koinex
 
 System Requirements: NodeJs
 
+## DeepSource
+
+[![DeepSource](https://deepsource.io/gh/nyctophiliacme/Crypto-Manager.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/nyctophiliacme/Crypto-Manager/?ref=repository-badge)
+
+[![DeepSource](https://deepsource.io/gh/nyctophiliacme/Crypto-Manager.svg/?label=resolved+issues&show_trend=true)](https://deepsource.io/gh/nyctophiliacme/Crypto-Manager/?ref=repository-badge)
+
 # Setup Instructions:
 
 1. Download the setup files from here: https://drive.google.com/open?id=1XaY4cIHiYJQ3jPD4T4MWIfsby99udluv
