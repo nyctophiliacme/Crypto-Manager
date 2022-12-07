@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Helps to calculate profit/loss in each of the cryptocurrencies you have invested.",
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "pg": "^7.4.0",
     "body-parser": "^1.18.2",
     "express-session": "^1.15.6"
